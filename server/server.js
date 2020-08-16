@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const fs = require('fs')
 const path = require('path')
-//let cors = require('cors')
+const cors = require('cors')
 
 // require json clients
 const filePath = path.join(__dirname, 'clients_db.json');
@@ -12,7 +12,7 @@ require('dotenv').config()
 
 const app = express()
 
-//app.use(cors())
+app.use(cors())
 // parse requests of content-type - application/json
 app.use(express.json())
 // parse requests of content-type - application/x-www-form-urlencoded
