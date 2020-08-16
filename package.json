@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently --kill-others \"heroku local\" \"npm run start --prefix ./client\"",
     "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"

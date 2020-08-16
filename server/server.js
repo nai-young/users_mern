@@ -18,7 +18,7 @@ app.use(cors())
 app.use(express.json())
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
+app.use(express.static(path.join(__dirname, '../client/build')))
 
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'text/html');
