@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
 // connection to database
 
 const mongouri = process.env.MONGODB_URL
