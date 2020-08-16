@@ -6,19 +6,19 @@ const app = express()
 const cors = require('cors')
 const http = require('http').Server(app)
 
+app.use(express.static(path.join(__dirname, '../client/build')))
+
 // require json clients
 const filePath = path.join(__dirname, 'clients_db.json');
 const clients = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 
 require('dotenv').config()
 
-
 app.use(cors())
 // parse requests of content-type - application/json
 app.use(express.json())
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '../client/build')))
 
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'text/html');
@@ -51,6 +51,6 @@ app.use('/clients', clientsRouter)
 
 // connection to server
 const port = process.env.PORT || 5000
-http.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server is listening on port ${port}`)
 })

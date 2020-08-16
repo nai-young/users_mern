@@ -5,6 +5,7 @@ export default class CreateClient extends Component{
   constructor(props) {
     super(props)
 
+
     this.state = {
       name: '',
       lastn: '',
@@ -50,7 +51,7 @@ export default class CreateClient extends Component{
       project: this.state.project
     }
 
-    axios.post('/clients', client)
+    axios.post('http://localhost:5000/clients', client)
       .then(result => console.log(result.data))
       .catch(err => console.log('Error connect front to back: ' + err))
 

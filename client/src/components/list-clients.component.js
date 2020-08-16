@@ -34,7 +34,7 @@ export default class ListClients extends Component {
       .catch(err => console.log(err))
   }
   deleteClient = (id) => {
-    axios.delete('/clients/' + id)
+    axios.delete('http://localhost:5000/clients/' + id)
       .then(res => console.log(res.data))
     this.setState({
       // return no equals to id deleted
