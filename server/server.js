@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const fs = require('fs')
 const path = require('path')
+const app = express()
 const cors = require('cors')
 const http = require('http').Server(app)
 
@@ -11,13 +12,13 @@ const clients = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 
 require('dotenv').config()
 
-const app = express()
 
 app.use(cors())
 // parse requests of content-type - application/json
 app.use(express.json())
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
 
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'text/html');
@@ -27,9 +28,8 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
-// connection to database
 
+// connection to database
 const mongouri = process.env.MONGODB_URL
 mongoose.connect(mongouri, { 
   useNewUrlParser: true, 
@@ -51,6 +51,6 @@ app.use('/clients', clientsRouter)
 
 // connection to server
 const port = process.env.PORT || 5000
-app.listen(port, () => {
+http.listen(port, () => {
   console.log(`Server is listening on port ${port}`)
 })
