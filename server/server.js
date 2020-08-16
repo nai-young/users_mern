@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const fs = require('fs')
 const path = require('path')
 const cors = require('cors')
+const http = require('http').Server(app)
 
 // require json clients
 const filePath = path.join(__dirname, 'clients_db.json');
@@ -42,9 +43,6 @@ const Client = require('./models/client.model')
 connection.once('open', () => {
   Client.collection.deleteMany({})
   Client.collection.insertMany(clients)
-    .then(() => {
-      console.log('data inserted')
-    })
 })
 
 // connecting routes
