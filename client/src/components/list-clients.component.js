@@ -25,7 +25,7 @@ export default class ListClients extends Component {
   }
 
   componentDidMount() {
-    axios.get('/clients')
+    axios.get('/')
       .then(res => {
         this.setState({
           clients: res.data
@@ -34,7 +34,7 @@ export default class ListClients extends Component {
       .catch(err => console.log(err))
   }
   deleteClient = (id) => {
-    axios.delete('http://localhost:5000/clients/' + id)
+    axios.delete('/' + id)
       .then(res => console.log(res.data))
     this.setState({
       // return no equals to id deleted

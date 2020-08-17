@@ -59,7 +59,7 @@ connection.once('open', () => {
 
 // connecting routes
 const clientsRouter = require('./routes/clients')
-app.use('/clients', clientsRouter)
+app.use('/', clientsRouter)
 
 // connection to server
 const port = process.env.PORT || 5000
