@@ -48,9 +48,3 @@ router.route('/:id').delete((req, res) => {
 })
 
 module.exports = router
-/* 
-router.get('/clients', clients.listClients)
-router.post('/clients', clients.createClient)
-router.post('/edit/:id', clients.editClient)
-router.get('/clients/:id', clients.oneClient)
-router.delete('/clients/:id', clients.deleteClient) */
