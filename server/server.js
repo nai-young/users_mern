@@ -6,7 +6,15 @@ const app = express()
 const cors = require('cors')
 const http = require('http').Server(app)
 
-app.use(express.static(path.join(__dirname, '../client/build')))
+//app.use(express.static(path.join(__dirname, '../client/build')))
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, '../client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  });
+}
 
 // require json clients
 const filePath = path.join(__dirname, 'clients_db.json');
@@ -25,6 +33,10 @@ app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header(
+    "Access-Control-Allow-Origin",
+    "http://clientscrud.herokuapp.com"
   );
   next();
 });
