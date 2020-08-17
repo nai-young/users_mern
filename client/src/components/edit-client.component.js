@@ -67,7 +67,7 @@ export default class EditClient extends Component{
 
     axios.post('/clients/edit/' + this.props.match.params.id, client)
       .then(result => console.log(result.data))
-      .catch(err => console.log('Error connect front to back: ' + err))
+      .catch(err => console.log('Error editing client: ' + err))
 
     window.location = '/' 
   }
