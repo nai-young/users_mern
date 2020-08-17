@@ -65,7 +65,7 @@ export default class EditClient extends Component{
       project: this.state.project
     }
 
-    axios.post('/clients/edit/' + this.props.match.params.id, client)
+    axios.post('/edit/' + this.props.match.params.id, client)
       .then(result => console.log(result.data))
       .catch(err => console.log('Error editing client: ' + err))
 
