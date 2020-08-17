@@ -16,7 +16,7 @@ export default class EditClient extends Component{
   }
 
   componentDidMount() {
-    axios.get('/' + this.props.match.params.id)
+    axios.get('http://localhost:5000/api/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           name: res.data.name,
@@ -65,7 +65,7 @@ export default class EditClient extends Component{
       project: this.state.project
     }
 
-    axios.post('/edit/' + this.props.match.params.id, client)
+    axios.post('http://localhost:5000/api/edit/' + this.props.match.params.id, client)
       .then(result => console.log(result.data))
       .catch(err => console.log('Error connect front to back: ' + err))
 
