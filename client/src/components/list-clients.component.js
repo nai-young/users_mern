@@ -11,7 +11,7 @@ const Client = props => (
     <td>{props.client.mobileno}</td>
     <td>{props.client.project}</td>
     <td className="options-client">
-      <Link to={"/edit/" + props.client._id}>Edit</Link> | <a href="#" onClick={() => {
+      <Link to={"http://localhost:5000/edit/" + props.client._id}>Edit</Link> | <a href="#" onClick={() => {
           props.deleteClient(props.client._id)}}>Delete</a>
     </td>
   </tr>
@@ -25,7 +25,7 @@ export default class ListClients extends Component {
   }
 
   componentDidMount() {
-    axios.get('/')
+    axios.get('http://localhost:5000')
       .then(res => {
         this.setState({
           clients: res.data
@@ -34,7 +34,7 @@ export default class ListClients extends Component {
       .catch(err => console.log(err))
   }
   deleteClient = (id) => {
-    axios.delete('/' + id)
+    axios.delete('http://localhost:5000/' + id)
       .then(res => console.log(res.data))
     this.setState({
       // return no equals to id deleted
