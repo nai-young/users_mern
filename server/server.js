@@ -58,7 +58,7 @@ connection.once('open', () => {
 
 // connecting routes
 const clientsRouter = require('./routes/clients')
-app.use('/api', clientsRouter)
+app.use('/clients', clientsRouter)
 
 // connection to server
 const port = process.env.PORT || 5000
