@@ -11,7 +11,7 @@ const Client = props => (
     <td>{props.client.mobileno}</td>
     <td>{props.client.project}</td>
     <td className="options-client">
-      <Link to={"http://localhost:5000/edit/" + props.client._id}>Edit</Link> | <a href="#" onClick={() => {
+      <Link to={"/edit/" + props.client._id}>Edit</Link> | <a href="#" onClick={() => {
           props.deleteClient(props.client._id)}}>Delete</a>
     </td>
   </tr>
