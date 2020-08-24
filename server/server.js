@@ -54,10 +54,12 @@ const Client = require('./models/client.model')
 connection.once('open', () => {
   Client.collection.deleteMany({})
   Client.collection.insertMany(clients)
+  
 })
 
 // connecting routes
 const clientsRouter = require('./routes/clients')
+const { db } = require('./models/client.model')
 app.use('/clients', clientsRouter)
 
 // connection to server
@@ -65,3 +67,4 @@ const port = process.env.PORT || 5000
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`)
 })
+

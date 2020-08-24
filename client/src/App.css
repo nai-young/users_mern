@@ -62,3 +62,17 @@ p {
     transform: rotate(360deg);
   }
 }
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .list-clients {
+    min-width: 100%;
+    padding: 0 2rem;
+    margin: 0; 
+  }
+  .add-client {
+    min-width: 50%;
+    margin: 0 auto;
+  }
+}
