@@ -11,7 +11,7 @@
 
 <br/>
 
-PROJECT IN PROGRESS (SEP 2021).
+PROJECT VERSION 2.0 IN PROCESS (SEP 2021).
 
 > Full Stack application. CRUD MERN Stack API
 >
