@@ -1,0 +1,49 @@
+.edit-profile-cont {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-profile-cont div:first-child {
+  width: 200px;
+}
+.edit-profile-cont img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 0.15rem rgb(97, 97, 97));
+}
+.edit-profile-cont form {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.edit-profile-cont form .form-group {
+  width: 100%;
+}
+.edit-profile-cont form input {
+  color: var(--base-dark);
+  width: 100%;
+}
+.edit-profile-cont form input:focus-visible {
+  outline: 0;
+}
+.edit-profile-cont form input[type="text"],
+.edit-profile-cont form input[type="password"],
+.edit-profile-cont form input[type="number"] {
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.edit-profile-cont form input[type="submit"] {
+  grid-column: 1 / 3;
+  background-color: #2d3942;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--base-white);
+}
+.edit-profile-cont form input[type=submit]:hover {
+  background-color: #3b4a55;
+}

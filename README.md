@@ -1,23 +1,47 @@
-<h1 align="center">Welcome to Clients - CRUD API 👋</h1>
+<h1 align="center">Welcome to Users_DB project 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href="https://twitter.com/NaiYoung4" target="_blank">
-    <img alt="Twitter: NaiYoung4" src="https://img.shields.io/twitter/follow/NaiYoung4.svg?style=social" />
+  <a href="https://twitter.com/naiche_young" target="_blank">
+    <img alt="Twitter: naiche_young" src="https://img.shields.io/twitter/follow/naiche_young.svg?style=social" />
   </a>
 </p>
 
-> Full Stack project. Create, read, update and delete clients from JSON file to database
+<br/>
+
+> Full Stack application. CRUD API from JSON file to MongoDB database.
 >
-> Developed using MERN Stack
+> Developed using MERN Stack & JWT Auth.
+>
+> - Home/Login page (public) =  /
+>
+> - Register page / Update profile (private) = POST /profile
+>
+> - Get all Users Profiles (private) ADMIN permission only = GET /profile
+>
+> - Get User Profile (public) = GET /profile/user/:id
+>
+> - Get current user (private) = GET /profile/me
+>
+> - Delete profile (private) = DELETE /profile
+
+<br/>
 
 ### 🏠 [Homepage](https://clientscrud.herokuapp.com/)
 
 ### ✨ [Demo](https://clientscrud.herokuapp.com/)
 
+> Email -  *admin@api.com*
+>
+> Password - *123456*
+
+<br/>
+
 ## Install
+
+---
 
 ```sh
 npm install
@@ -25,30 +49,45 @@ npm install
 
 ## Usage
 
+---
+
+Run server and client files:
+
 ```sh
 npm run dev
 ```
 
-## Run tests
+Run server:
 
 ```sh
-npm run test
+npm run server
 ```
+
+Run client:
+
+```sh
+npm run client
+```
+
+<br/>
 
 ## Author
 
+---
+
 👤 **Naiche L. Young**
 
-* Website: naicheyoung.com
-* Twitter: [@NaiYoung4](https://twitter.com/NaiYoung4)
-* Github: [@nai-young](https://github.com/nai-young)
-* LinkedIn: [@naiyoung](https://linkedin.com/in/naiyoung)
+* [naicheyoung.com](https://naicheyoung.com)
+* [Twitter](https://twitter.com/naiche_young)
+* [Github](https://github.com/nai-young)
+* [LinkedIn](https://linkedin.com/in/naiyoung)
+
+<br/>
 
 ## Show your support
 
+---
+
 Give a ⭐️ if you liked this project!
 
-<a href="https://www.buymeacoffee.com/naiyoung" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+<a href="https://www.buymeacoffee.com/naiyoung" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;" ></a>

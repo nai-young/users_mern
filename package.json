@@ -1,18 +1,20 @@
 {
-  "name": "clients_crud",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "users_mern",
+  "version": "2.0.0",
+  "description": "Full-Stack project. CRUD API",
+  "main": "server/config/server.js",
   "scripts": {
-    "client": "cd client && npm start",
-    "server": "cd server && nodemon server.js",
+    "client": "npm start --prefix client",
+    "server": "cd server/config && nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently --kill-others \"heroku local\" \"npm run start --prefix ./client\"",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
     "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
   },
-  "author": "",
+  "author": "Naiche",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0"
+  },
+  "dependencies": {
   }
 }
