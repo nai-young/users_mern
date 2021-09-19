@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Users_DB project 👋</h1>
+<h1 align="center">Welcome to Users_MERN project 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -11,21 +11,12 @@
 
 <br/>
 
-> Full Stack application. CRUD API from JSON file to MongoDB database.
+PROJECT IN PROGRESS (SEP 2021).
+
+> Full Stack application. CRUD MERN Stack API
 >
-> Developed using MERN Stack & JWT Auth.
->
-> - Home/Login page (public) =  /
->
-> - Register page / Update profile (private) = POST /profile
->
-> - Get all Users Profiles (private) ADMIN permission only = GET /profile
->
-> - Get User Profile (public) = GET /profile/user/:id
->
-> - Get current user (private) = GET /profile/me
->
-> - Delete profile (private) = DELETE /profile
+> Developed using React, Node, MongoDB, Express & JWT Authentication.
+
 
 <br/>
 
