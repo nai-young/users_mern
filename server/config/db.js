@@ -15,9 +15,7 @@ const connectDB = async () => {
       }
     )
     console.log('==> 🌎 MongoDB Connected...')
-
-    /* await User.deleteMany({})
-    await User.insertMany(users) */
+    
     const usersCount = await User.collection.countDocuments({})
     const postsCount = await Post.collection.countDocuments({})
     console.log(`==> 🌎 Total: ${usersCount} users & ${postsCount} posts`)
