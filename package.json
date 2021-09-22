@@ -8,7 +8,7 @@
     "client":"cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "postinstall": "npm install --prefix ./backend && npm install --prefix ./frontend && npm run build --prefix ./frontend"
+    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
   },
   "author": "Naiche",
   "license": "ISC",
