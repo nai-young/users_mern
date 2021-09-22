@@ -7,7 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "server": "cd server && npm install && nodemon config/server.js",
+    "server": "cd server && npm install && node config/server.js",
     "client":"cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"concurrently \"npm run server\" \"npm run client\"",
