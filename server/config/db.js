@@ -2,7 +2,7 @@ require("dotenv").config()
 const mongoose = require('mongoose')
 const User = require('../models/User')
 const Post = require('../models/Post')
-const db = process.env.mongoUri
+const db = process.env.MONGODB_URI
 
 const connectDB = async () => {
   try {
