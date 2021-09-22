@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
     'https://users-mern.herokuapp.com/'
   )
   next()
-});
+}); 
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
