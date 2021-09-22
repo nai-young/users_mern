@@ -1,0 +1,134 @@
+/* - ADD POST - */
+
+.posts-add-container {
+  height: 20vh;
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+.posts-add-container form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.posts-add-container form div:first-child {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.posts-add-container form textarea {
+  border: 1px solid var(--base-white);
+  height: 100%;
+  color: var(--base-dark);
+  padding: 1rem;
+}
+.posts-add-container form textarea:focus {
+  outline: 0;
+}
+.posts-add-container form div:last-child {
+  height: 50%;
+  width: 20%;
+}
+
+.posts-add-container form input[type="submit"] {
+  border: none;
+  padding: .3rem 1.2rem;
+  border-radius: 1px;
+  background-color: #303f4b;
+  color: var(--base-white);
+}
+.posts-add-container form input[type="submit"]:hover {
+  background-color: #586670;
+}
+
+/* - POSTS LIST - */
+
+.posts-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* - AUTHOR - */
+
+.posts-content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.posts-content-header > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--base-dark);
+
+}
+.posts-content-header > a > i{
+}
+#button-tooltip {
+  margin-left: .5rem;
+}
+
+/* - POST CARD - */
+
+.posts-card {
+  box-shadow: rgba(0, 0, 0, 0.386) 5px 5px 25px;
+  padding: 1rem;
+  width: 70%;
+  margin: .5rem auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--base-white);
+}
+
+/* - CONTENT - */
+
+.posts-content {
+  width: 100%;
+  height: 80%;
+}
+.posts-content > * {
+  margin: 1rem 0;
+}
+.posts-content  .display-text-group  .displayed-text {
+  color: var(--base-dark);
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* DATE, COMMENTS, LIKES */
+
+.posts-info {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.posts-info  p {
+  margin: 0;
+  color: var(--base-dark);
+}
+
+/* - READ MORE BUTTON - */
+
+.posts-card .posts-info a {
+  text-decoration: none;
+  padding: .3rem 1.2rem;
+  border-radius: 20px;
+  background-color: #3C4E5C;
+  color: var(--base-white);
+}
+.posts-card .posts-info a:hover {
+  background-color: #586670;
+}
