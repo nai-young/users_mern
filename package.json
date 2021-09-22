@@ -3,12 +3,15 @@
   "version": "2.0.0",
   "description": "Full-Stack project. CRUD API",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "server": "cd server/config && nodemon server.js",
     "client":"cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
+    "heroku-postbuild": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
   },
   "author": "Naiche",
   "license": "ISC",
