@@ -13,7 +13,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', '..', '/client/build')))
 }
 app.use(function(req, res, next) {
-  res.setHeader('Content-Type', 'text/html')
   res.header(
     "Access-Control-Allow-Headers",
     "x-auth-token, Origin, Content-Type, Accept"
