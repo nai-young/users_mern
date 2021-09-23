@@ -40,7 +40,6 @@ export default class Login extends Component {
       const user = JSON.stringify(newUser)
       const res = await axios.post('/auth/', user, config)
       localStorage.setItem('token', res.data.token);
-      localStorage.setItem('status', true);
       window.location.reload()
     } catch (err) {
       console.error(err.response.data)

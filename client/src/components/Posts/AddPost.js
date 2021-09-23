@@ -29,7 +29,7 @@ export default class AddPost extends Component {
     try {
       const post = JSON.stringify(newPost)
       await axios.post('/posts/', post, { headers })
-      window.location = '/posts'
+      window.location.reload()
     } catch (err) {
       console.error(err.message)
     }

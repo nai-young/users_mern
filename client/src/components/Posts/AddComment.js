@@ -38,7 +38,7 @@ export default class AddComment extends Component {
   render() {
     return (
       <div className="add-comment">
-        <form onSubmit={e => this.handleSubmit(e)}>
+        <form>
           <textarea name="text" onChange={e => this.handleText(e)} placeholder="Enter text..." value={this.state.text}/>
           <input type="submit" value="Send"/>
         </form>
