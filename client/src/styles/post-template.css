@@ -138,4 +138,5 @@
 .add-comment form input[type="submit"] {
   width: 50%;
   border: none;
+  cursor: pointer;
 }
