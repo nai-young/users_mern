@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React, { Component } from 'react'
 
 export default class AddComment extends Component {
@@ -8,14 +8,14 @@ export default class AddComment extends Component {
       text: '',
     }
     this.handleText = this.handleText.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleText = async (e) => {
     this.setState({
       text: e.target.value
     })
   }
-  handleSubmit = async (e) => {
+  /* handleSubmit = async (e) => {
     e.preventDefault()
 
     const token = localStorage.getItem('token')
@@ -34,13 +34,13 @@ export default class AddComment extends Component {
     } catch (err) {
       console.error(err.message)
     }
-  }
+  } */
   render() {
     return (
       <div className="add-comment">
         <form>
           <textarea name="text" onChange={e => this.handleText(e)} placeholder="Enter text..." value={this.state.text}/>
-          <input type="submit" value="Send"/>
+          <input type="submit" disabled value="Send"/>
         </form>
       </div>
     )
