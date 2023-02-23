@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Full-Stack project. CRUD API",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "server": "cd server && npm install && node config/server.js",
     "client":"cd client && npm start",
