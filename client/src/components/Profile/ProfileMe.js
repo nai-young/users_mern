@@ -28,6 +28,7 @@ export default class ProfileMe extends Component {
     }
     this.deleteProfile = this.deleteProfile.bind(this)
   }
+
   componentDidMount = async () => {
     const headers = {
       'x-auth-token': this.state.token
@@ -42,6 +43,7 @@ export default class ProfileMe extends Component {
       .catch(err => console.error(err.message))
     await axios.get('/profile/me', { headers })
       .then(res => {
+        console.log("RES", res)
         this.setState({
         lastn: res.data.lastn,
         mobileno:res.data.mobileno,

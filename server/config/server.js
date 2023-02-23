@@ -37,7 +37,7 @@ app.use('/profile', profileRouter)
 app.use('/posts', postsRouter)
 
 // connection to server
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 app.listen(port, () => {
   console.log(`==> 🌎 Server listening on port ${port}`)
 })

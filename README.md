@@ -11,8 +11,6 @@
 
 <br/>
 
-PROJECT IN PROGRESS (SEP 2021).
-
 > Full Stack application. CRUD MERN Stack API
 >
 > Developed using React, Node, MongoDB, Express & JWT Authentication. Easly register and login users, create, edit and remove posts. Axios HTTP requests.

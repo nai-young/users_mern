@@ -3,9 +3,6 @@
   "version": "2.0.0",
   "description": "Full-Stack project. CRUD API",
   "main": "server.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "server": "cd server && npm install && node config/server.js",
     "client":"cd client && npm start",
@@ -16,6 +13,6 @@
   "author": "Naiche",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.2.1"
+    "concurrently": "^7.6.0"
   }
 }
