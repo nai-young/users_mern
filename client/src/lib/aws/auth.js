@@ -1,5 +1,5 @@
 import { Amplify, Auth } from 'aws-amplify';
-import awsconfig from 'aws-exports';
+import awsconfig from './aws-exports';
 
 export const initAuth = () => {
 	try {
