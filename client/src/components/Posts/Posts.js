@@ -42,7 +42,6 @@ export default class Posts extends Component {
         <div style={{padding: '1rem 0'}}>
           {
             this.state.posts.map(post => {
-              
               return (
                 <div className="posts-card">
                   {/* <div>
@@ -60,7 +59,7 @@ export default class Posts extends Component {
                         delay={{ show: 50, hide: 400 }}
                         overlay={renderTooltip}
                       >
-                        <Link to={`/profile/${post.user}`}>{post.name}</Link>
+                        <Link to={`/profile/${this.props.match.params.profile_id}`}>{post.name}</Link>
                       </OverlayTrigger>
                     </div>
                     <ReadMoreReact

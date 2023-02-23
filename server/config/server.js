@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -7,21 +6,26 @@ const authRouter = require('../routes/auth')
 const usersRouter = require('../routes/users')
 const profileRouter = require('../routes/profile')
 const postsRouter = require('../routes/posts')
+require("dotenv").config()
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, '..', '..', '/client/build')));
+  app.use(express.static(path.join(__dirname, '..', '..', '/client/build')))
 }
 app.use(function(req, res, next) {
   res.header(
     "Access-Control-Allow-Headers",
     "x-auth-token, Origin, Content-Type, Accept"
   )
+  res.header(
+    'Access-Control-Allow-Origin',
+    'https://users-mern.herokuapp.com/'
+  )
   next()
-});
+}); 
 
-app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 // connection to database
 connectDB()
@@ -33,7 +37,7 @@ app.use('/profile', profileRouter)
 app.use('/posts', postsRouter)
 
 // connection to server
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 app.listen(port, () => {
   console.log(`==> 🌎 Server listening on port ${port}`)
 })

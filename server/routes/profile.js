@@ -32,6 +32,7 @@ router.get('/me', auth, async (req, res) => {
 router.get('/:profile_id', auth, async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.profile_id)
+    console.log('profile ' + profile)
     res.json(profile)
   } catch (err) {
     console.error(err.message)

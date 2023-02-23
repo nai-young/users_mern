@@ -2,7 +2,7 @@ require("dotenv").config()
 const mongoose = require('mongoose')
 const User = require('../models/User')
 const Post = require('../models/Post')
-const db = process.env.mongoUri
+const db = process.env.MONGODB_URI
 
 const connectDB = async () => {
   try {
@@ -15,9 +15,7 @@ const connectDB = async () => {
       }
     )
     console.log('==> 🌎 MongoDB Connected...')
-
-    /* await User.deleteMany({})
-    await User.insertMany(users) */
+    
     const usersCount = await User.collection.countDocuments({})
     const postsCount = await Post.collection.countDocuments({})
     console.log(`==> 🌎 Total: ${usersCount} users & ${postsCount} posts`)

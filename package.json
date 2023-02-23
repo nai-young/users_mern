@@ -2,19 +2,17 @@
   "name": "users_mern",
   "version": "2.0.0",
   "description": "Full-Stack project. CRUD API",
-  "main": "server/config/server.js",
+  "main": "server.js",
   "scripts": {
-    "client": "npm start --prefix client",
-    "server": "cd server/config && nodemon server.js",
+    "server": "cd server && npm install && node config/server.js",
+    "client":"cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
-    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Naiche",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^5.3.0"
-  },
   "dependencies": {
+    "concurrently": "^7.6.0"
   }
 }

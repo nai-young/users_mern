@@ -17,6 +17,7 @@ export default class Profile extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      profileid: '',
       name: '',
       lastn: '',
       email: '',
@@ -33,7 +34,7 @@ export default class Profile extends Component {
     }
     await axios.get(`/profile/${this.props.match.params.profile_id}`, { headers })
       .then(profile => {
-        console.log(this.props)
+        // console.log(this.props)
         this.setState({
           lastn: profile.data.lastn,
           mobileno: profile.data.mobileno,

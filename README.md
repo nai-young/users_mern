@@ -11,11 +11,19 @@
 
 <br/>
 
-PROJECT VERSION 2.0 IN PROCESS (SEP 2021).
-
 > Full Stack application. CRUD MERN Stack API
 >
-> Developed using React, Node, MongoDB, Express & JWT Authentication.
+> Developed using React, Node, MongoDB, Express & JWT Authentication. Easly register and login users, create, edit and remove posts. Axios HTTP requests.
+>
+> Upcoming features:
+>
+> - Add posts comments (routes & form)
+>
+> - Display users profiles by id
+>
+> - Like & dislike posts (add likes working)
+>
+> - Send privates messages (bidirectional communication w/ Socket.io)
 
 
 <br/>

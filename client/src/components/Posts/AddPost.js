@@ -5,8 +5,7 @@ export default class AddPost extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: '',
-      token: localStorage.getItem('token')
+      text: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -18,21 +17,23 @@ export default class AddPost extends Component {
   }
   handleSubmit = async (e) => {
     e.preventDefault()
-
+    const token = localStorage.getItem('token')
     const newPost = {
       text : this.state.text
     }
     const headers = {
       'Content-Type': 'application/json',
-      'x-auth-token': this.state.token
+      'x-auth-token': token
     }
-    try {
-      const post = JSON.stringify(newPost)
-      await axios.post('/posts/', post, { headers })
-      window.location = '/posts'
-    } catch (err) {
-      console.error(err.message)
-    }
+    const post = JSON.stringify(newPost)
+    await axios.post('/posts/', post, { headers })
+      .then(res => {
+        console.log('New post created.')
+      })
+      .catch(err => {
+        console.error(err.message)
+      })
+    window.location.reload()
   }
   render() {
     return (

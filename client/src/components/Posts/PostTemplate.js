@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import userImg from '../../images/avatar.png'
 import likeImg from '../../images/like-icon-white.png'
 import calendarImg from '../../images/calendar-icon-white.png'
+import AddComment from './AddComment'
 
 export default class Post extends Component {
   constructor(props) {
@@ -63,10 +64,10 @@ export default class Post extends Component {
             </Link>
           </div>
           <div>
-          <p>
+            <div className="calendar-img">
               <p>{this.state.date.slice(0, 10)}</p>
               <img src={calendarImg} alt="Date" />
-            </p>
+            </div>
             <p>Comments: {this.state.comments.length}</p>
             <p>Likes: {this.state.likes.length}</p>
             <button onClick={e => this.likePost(e)}>
@@ -76,6 +77,10 @@ export default class Post extends Component {
         </div>
         <div className="post-content">
           <p>{this.state.text}</p>
+        </div>
+        <div className="comments">
+          <h3>Comments</h3>
+          <AddComment/>
         </div>
       </div>
     )
