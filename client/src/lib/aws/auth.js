@@ -1,5 +1,5 @@
 import { Amplify, Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
+import awsconfig from './aws-exports.js';
 
 export const initAuth = () => {
 	try {
@@ -9,10 +9,9 @@ export const initAuth = () => {
 	}
 };
 
-export const isUserAuth =  () => {
-	 return Auth.currentAuthenticatedUser();
+export const isUserAuth = () => {
+	return Auth.currentAuthenticatedUser();
 };
-
 
 // Sign Up
 
@@ -64,5 +63,3 @@ export const forgotPasswordSubmit = (
 export const signOut = () => {
 	return Auth.signOut();
 };
-
-
