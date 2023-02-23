@@ -1,1 +1,1 @@
-web: npm run server
+web: nodemon server/config/server.js
